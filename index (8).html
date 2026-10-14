@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bharani Graphics | Printing & Graphic Design in Nagercoil</title>
+<meta name="description" content="Bharani Graphics, Nagercoil: logo design, visiting cards, wedding cards, offset & multicolor printing, radio ads, branding, signage and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e0e10;--ink2:#17171b;--card:#1d1d22;--line:#2b2b32;--gold:#c9a24b;--gold2:#e8c97a;--txt:#ecebe6;--mute:#a09f98;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--ink);color:var(--txt);line-height:1.65;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;line-height:1.15}
+.eyebrow{color:var(--gold);letter-spacing:.28em;text-transform:uppercase;font-size:.75rem;font-weight:500}
+section{padding:110px 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3.2rem);margin:12px 0 14px}
+.sec-head p{color:var(--mute)}
+.btn{display:inline-block;padding:14px 32px;border-radius:50px;font-weight:500;font-size:.92rem;transition:.3s;cursor:pointer;border:1px solid var(--gold)}
+.btn.fill{background:var(--gold);color:#111}
+.btn.fill:hover{background:var(--gold2)}
+.btn.ghost{color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:#111}
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:20px 0;transition:.35s}
+nav.scrolled{background:rgba(14,14,16,.92);backdrop-filter:blur(10px);padding:12px 0;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:32px;align-items:center;font-size:.9rem}
+.links a:not(.btn){color:var(--mute);transition:.25s}
+.links a:not(.btn):hover{color:var(--gold)}
+.burger{display:none;background:none;border:0;color:var(--txt);font-size:1.7rem;cursor:pointer}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 90px}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(135deg,#1b1a22,#0e0e10)}
+.hero .bg img{opacity:.5}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--ink) 15%,rgba(14,14,16,.55) 70%,rgba(14,14,16,.2))}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:820px;margin:18px 0 24px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{max-width:520px;color:var(--mute);font-size:1.1rem;margin-bottom:36px}
+.hero .cta{display:flex;gap:16px;flex-wrap:wrap}
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--ink2)}
+.track{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--mute);font-style:italic}
+.track b{color:var(--gold);font-weight:500}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.4s}
+.svc:hover{transform:translateY(-8px);border-color:var(--gold)}
+.svc .pic{height:210px;overflow:hidden;background:linear-gradient(135deg,#25232c,#17171b)}
+.svc .pic img{transition:.6s}
+.svc:hover .pic img{transform:scale(1.08)}
+.svc .body{padding:26px}
+.svc .n{color:var(--gold);font-size:.8rem;letter-spacing:.2em}
+.svc h3{font-size:1.4rem;margin:6px 0 8px}
+.svc p{color:var(--mute);font-size:.94rem}
+/* portfolio */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.filters button{background:none;border:1px solid var(--line);color:var(--mute);padding:9px 22px;border-radius:40px;cursor:pointer;font:inherit;font-size:.85rem;transition:.25s}
+.filters button.on,.filters button:hover{border-color:var(--gold);color:var(--gold)}
+.masonry{columns:3;column-gap:22px}
+.work{break-inside:avoid;margin-bottom:22px;border-radius:var(--r);overflow:hidden;position:relative;background:linear-gradient(135deg,#25232c,#17171b)}
+.work img{transition:.6s}
+.work:hover img{transform:scale(1.07)}
+.work .cap{position:absolute;inset:auto 0 0 0;padding:60px 22px 20px;background:linear-gradient(transparent,rgba(0,0,0,.85));transform:translateY(40%);opacity:0;transition:.4s}
+.work:hover .cap{transform:none;opacity:1}
+.work .cap small{color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem}
+.work .cap h4{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:500}
+.work.hide{display:none}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about .imgs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.about .imgs div{border-radius:var(--r);overflow:hidden;height:300px;background:#222}
+.about .imgs div:nth-child(2){margin-top:40px}
+.about h2{font-size:clamp(2rem,4vw,2.9rem);margin:12px 0 18px}
+.about p{color:var(--mute);margin-bottom:16px}
+.stats{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap}
+.stats b{display:block;font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--gold);font-weight:500}
+.stats span{color:var(--mute);font-size:.85rem}
+/* process */
+.proc{background:var(--ink2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{border-top:2px solid var(--gold);padding-top:22px}
+.step i{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold);font-style:normal}
+.step h3{font-size:1.3rem;margin:8px 0}
+.step p{color:var(--mute);font-size:.92rem}
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.t{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:32px}
+.t .st{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+.t p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;margin-bottom:18px}
+.t small{color:var(--mute)}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:60px}
+.contact h2{font-size:clamp(2rem,4vw,3rem);margin:12px 0 18px}
+.info{margin-top:30px;display:grid;gap:14px;color:var(--mute)}
+.info b{color:var(--txt);display:block;font-weight:500}
+form{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:34px;display:grid;gap:16px}
+input,select,textarea{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--txt);padding:14px 16px;border-radius:10px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold)}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.rv{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:960px){
+ .grid3,.tgrid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}
+ .about,.contact{grid-template-columns:1fr}.masonry{columns:2}
+}
+@media(max-width:700px){
+ section{padding:80px 0}
+ .burger{display:block}
+ .links{position:fixed;inset:64px 0 auto 0;background:var(--ink);flex-direction:column;padding:28px;gap:20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s}
+ .links.open{transform:none}
+ .grid3,.tgrid,.steps,.row{grid-template-columns:1fr}.masonry{columns:1}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#top" class="logo" data-brand></a>
+  <button class="burger" id="burger" aria-label="Menu">&#9776;</button>
+  <div class="links" id="links">
+    <a href="#services">Services</a><a href="#work">Portfolio</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact" class="btn fill">Get a Quote</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="bg"><img data-img="1626785774625-ddcddc3445e9|1920" alt="Graphic design workspace with creative software"></div>
+  <div class="wrap">
+    <div class="eyebrow">Nagercoil &middot; Graphic Design &amp; Printing</div>
+    <h1>Design &amp; print that makes your brand <em>unforgettable</em>.</h1>
+    <p>Your one-stop destination for logo design, multicolor printing and creative advertising &mdash; trusted by businesses across Nagercoil.</p>
+    <div class="cta"><a href="#work" class="btn fill">View Our Work</a><a href="#contact" class="btn ghost">Start a Project</a></div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track" id="track"></div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head rv"><div class="eyebrow">What we do</div><h2>Design, print &amp; advertising under one roof</h2><p>From a single visiting card to a complete brand identity and radio campaign, we cover everything your business needs to stand out.</p></div>
+  <div class="grid3" id="svcGrid"></div>
+</div></section>
+
+<section id="work" style="background:var(--ink2)"><div class="wrap">
+  <div class="sec-head rv"><div class="eyebrow">Portfolio</div><h2>Selected work</h2><p>A glimpse of the projects we are proud of.</p></div>
+  <div class="filters rv" id="filters"></div>
+  <div class="masonry" id="masonry"></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="imgs rv">
+    <div><img data-img="1626785774573-4b799315345d|800" alt="Design workstation"></div>
+    <div><img data-img="1572044162444-ad60f128bdea|800" alt="Designer with colour swatches"></div>
+  </div>
+  <div class="rv">
+    <div class="eyebrow">About us</div>
+    <h2>Design that is thoughtful, bold and built to last.</h2>
+    <p>Bharani Graphics is committed to high-quality multicolor printing and creative radio advertising that helps businesses grow. We focus on innovative, reliable services that elevate your brand.</p>
+    <p>Whether you need visiting cards, wedding cards, notice printing, offset printing, a new logo, a logo animation or a radio ad, our team handles it with the same care and attention to detail.</p>
+    <div class="stats">
+      <div><b>4.7&#9733;</b><span>Google rating</span></div>
+      <div><b>9+</b><span>Design &amp; print services</span></div>
+      <div><b>10 PM</b><span>Open till late</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="process" class="proc"><div class="wrap">
+  <div class="sec-head rv"><div class="eyebrow">How we work</div><h2>A simple, clear process</h2></div>
+  <div class="steps">
+    <div class="step rv"><i>01</i><h3>Discover</h3><p>We learn about your business, audience and goals.</p></div>
+    <div class="step rv"><i>02</i><h3>Concept</h3><p>Sketches and ideas turn into design directions.</p></div>
+    <div class="step rv"><i>03</i><h3>Design</h3><p>We refine the chosen concept with your feedback.</p></div>
+    <div class="step rv"><i>04</i><h3>Deliver</h3><p>Final files, ready for print and digital use.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head rv"><div class="eyebrow">Why choose us</div><h2>Trusted by Nagercoil</h2></div>
+  <div class="tgrid">
+    <div class="t rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Top-quality multicolor printing</p><small>Crisp colours and clean finishing on cards, notices, wedding cards and offset jobs.</small></div>
+    <div class="t rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Creative advertising solutions</p><small>Logo design, logo animation, radio ads and audio/video editing to grow your brand.</small></div>
+    <div class="t rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Rated 4.7 on Google</p><small>A local team that clients in Nagercoil rely on for reliable service.</small></div>
+  </div>
+</div></section>
+
+<section id="contact" style="background:var(--ink2)"><div class="wrap contact">
+  <div class="rv">
+    <div class="eyebrow">Contact</div>
+    <h2>Let's create something great together.</h2>
+    <p style="color:var(--mute)">Tell us about your project and we will get back to you within one business day.</p>
+    <div class="info">
+      <div><b>Phone</b><span data-phone></span></div>
+      <div><b>Email</b><span data-email></span></div>
+      <div><b>Address</b><span data-address></span></div>
+      <div><b>Hours</b><span>Closes at 10 PM</span></div>
+      <div><a class="btn ghost" href="https://maps.google.com/?q=Bharani+Graphics+Nagercoil" target="_blank" rel="noopener">Get Directions</a></div>
+    </div>
+  </div>
+  <form class="rv" id="form">
+    <div class="row"><input required placeholder="Your name" name="name"><input required type="tel" placeholder="Phone" name="phone"></div>
+    <input type="email" placeholder="Email" name="email">
+    <select name="service" id="svcSelect"></select>
+    <textarea required placeholder="Tell us about your project" name="msg"></textarea>
+    <button class="btn fill" type="submit">Send on WhatsApp</button>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; <span id="yr"></span> <span data-brand-plain></span>. All rights reserved.</span><span>Designed with care.</span></div></footer>
+
+<script>
+/* ===== EDIT THESE DETAILS ===== */
+const CONFIG={
+  name:"Bharani Graphics",
+  phone:"+91 00000 00000",     // TODO: add real phone
+  whatsapp:"910000000000",     // TODO: country code + number, no + or spaces
+  email:"hello@bharanigraphics.com", // TODO: confirm real email
+  address:"24, E Car St, opp. Theradi, Krishnam Coil, Vadiveeswaram Village, Nagercoil, Tamil Nadu 629001"
+};
+/* Third value = Unsplash photo ID (free to use). Swap with your own photos any time. */
+const SERVICES=[
+ ["Logo Design","Memorable marks that capture who you are.","1611532736597-de2d4265fba3"],
+ ["Branding & Corporate Graphics","Identity, letterheads and graphics for a consistent brand.","1561070791-2526d30994b5"],
+ ["Visiting Cards & Stationery","Business cards, letterheads and custom stationery.","1718670013921-2f144aba173a"],
+ ["Wedding & Invitation Cards","Elegant invitations for your special day.","1633037773384-27d7ac0491e7"],
+ ["Offset & Multicolor Printing","High-quality printing for notices, bills and books.","1503694978374-8a2fa686963a"],
+ ["Brochures, Flyers & Catalogues","Print media that gets noticed and remembered.","1658863025658-4a259cc68fc9"],
+ ["Posters, Billboards & Signage","Large-format designs with impact from a distance.","1557858310-9052820906f7"],
+ ["Radio Ads, Audio & Video Editing","Creative radio advertising, logo animation and editing.","1478737270239-2f02b77fc618"],
+ ["Website & UI Graphics","Clean, modern graphics and interface design.","1558655146-d09347e92766"]
+];
+const WORKS=[
+ ["Logo","Brand Logo Design","1611241893603-3c359704e0ee"],
+ ["Print","Multicolor Print Samples","1581079289196-67865ea83118"],
+ ["Cards","Visiting Card Set","1704030459012-bfbe0d55fec6"],
+ ["Cards","Wedding Card Collection","1632610992723-82d7c212f6d7"],
+ ["Signage","Large-Format Banner Printing","1693031630369-bd429a57f115"],
+ ["Branding","Brand Colour Palette","1642480532034-362360552ccb"],
+ ["Signage","Outdoor Billboard Design","1612332883331-e8ea07a15f14"],
+ ["Audio/Video","Radio Ad Voice Recording","1531651008558-ed1740375b39"],
+ ["Branding","Identity & Stationery","1572044162444-ad60f128bdea"]
+];
+/* ================================= */
+const U=(id,w)=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+document.querySelectorAll('[data-brand]').forEach(e=>{const p=CONFIG.name.split(' ');e.innerHTML=p[0]+(p.length>1?' <span>'+p.slice(1).join(' ')+'</span>':'<span>.</span>')});
+document.querySelector('[data-brand-plain]').textContent=CONFIG.name;
+document.title=CONFIG.name+" | Graphic Design Studio";
+document.querySelector('[data-phone]').textContent=CONFIG.phone;
+document.querySelector('[data-email]').textContent=CONFIG.email;
+document.querySelector('[data-address]').textContent=CONFIG.address;
+document.getElementById('yr').textContent=new Date().getFullYear();
+// marquee
+const words=SERVICES.map(s=>s[0]);
+document.getElementById('track').innerHTML=[...words,...words].map(w=>`<span>${w}</span><b>&#10022;</b>`).join('');
+// services
+document.getElementById('svcGrid').innerHTML=SERVICES.map((s,i)=>`<article class="svc rv"><div class="pic"><img loading="lazy" src="${U(s[2],700)}" alt="${s[0]}"></div><div class="body"><div class="n">0${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p></div></article>`).join('');
+document.getElementById('svcSelect').innerHTML='<option value="">Service needed</option>'+SERVICES.map(s=>`<option>${s[0]}</option>`).join('');
+// portfolio
+const cats=['All',...new Set(WORKS.map(w=>w[0]))];
+document.getElementById('filters').innerHTML=cats.map((c,i)=>`<button class="${i?'':'on'}" data-c="${c}">${c}</button>`).join('');
+document.getElementById('masonry').innerHTML=WORKS.map((w,i)=>`<div class="work rv" data-c="${w[0]}"><img loading="lazy" src="${U(w[2],900)}" alt="${w[1]}"><div class="cap"><small>${w[0]}</small><h4>${w[1]}</h4></div></div>`).join('');
+document.getElementById('filters').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  document.querySelectorAll('.work').forEach(w=>w.classList.toggle('hide',b.dataset.c!=='All'&&w.dataset.c!==b.dataset.c));
+});
+// hero/about images from data-img
+document.querySelectorAll('[data-img]').forEach(el=>{const [id,w]=el.dataset.img.split('|');el.src=U(id,w)});
+// hide broken images gracefully (gradient background remains)
+document.addEventListener('error',e=>{
+  const t=e.target;if(t.tagName!=='IMG')return;
+  const n=+(t.dataset.try||0);
+  const m=t.src.match(/\/(\d+)\/(\d+)\//)||[0,800,600];
+  const w=m[1],h=m[2];
+  if(n===0){t.dataset.try=1;t.src=`https://picsum.photos/seed/${encodeURIComponent((t.alt||'bharani')+w+h)}/${w}/${h}`;return}
+  if(n===1){t.dataset.try=2;
+    const label=(t.alt||'Bharani Graphics').replace(/&/g,'and').replace(/</g,'');
+    const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='0 0 ${w} ${h}'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#2a2530'/><stop offset='1' stop-color='#14131a'/></linearGradient></defs><rect width='100%' height='100%' fill='url(#g)'/><circle cx='${w*0.8}' cy='${h*0.25}' r='${Math.min(w,h)*0.22}' fill='#c9a24b' opacity='.16'/><circle cx='${w*0.2}' cy='${h*0.8}' r='${Math.min(w,h)*0.3}' fill='#c9a24b' opacity='.08'/><text x='50%' y='50%' fill='#c9a24b' font-family='Georgia,serif' font-size='${Math.max(18,Math.min(w,h)*0.07)}' text-anchor='middle'>${label}</text></svg>`;
+    t.src='data:image/svg+xml;utf8,'+encodeURIComponent(svg);
+  }
+},true);
+// nav
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const links=document.getElementById('links');
+document.getElementById('burger').onclick=()=>links.classList.toggle('open');
+links.addEventListener('click',()=>links.classList.remove('open'));
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);
+  const t=+e.target.dataset.count;let n=0;const s=Math.max(1,Math.ceil(t/60));
+  const id=setInterval(()=>{n=Math.min(t,n+s);e.target.textContent=n+'+';if(n>=t)clearInterval(id)},25)}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+// form -> WhatsApp
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();const f=new FormData(e.target);
+  const m=`Hello ${CONFIG.name}, I am ${f.get('name')}.\nPhone: ${f.get('phone')}\nEmail: ${f.get('email')||'-'}\nService: ${f.get('service')||'-'}\n${f.get('msg')}`;
+  open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(m)}`,'_blank');
+});
+</script>
+</body>
+</html>
